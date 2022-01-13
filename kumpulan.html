@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="masuk">
+    <select name="pilih" id="pilih">
+        <option value="switch case" id="switch case">Switch Case</option>
+        <option value="kelipatan2" id="kelipatan2">Kelipatan 2</option>
+        <option value="kelipatan3" id="kelipatan3">Kelipatan 5</option>
+        <option value="ganjil genap" id="ganjil genap">Ganjil Genap</option>
+        <option value="kuadrat" id="kuadrat">Kuadrat</option>
+    </select>
+    <button onclick="hasil()">Sumbit</button>
+    
+    <script>
+        function hasil(){
+            var jumlah = document.getElementById("masuk").value;
+            var satu = document.getElementById("switch case").value;
+            var dua = document.getElementById("kelipatan2").value;
+            var tiga = document.getElementById("kelipatan3").value;
+            var empat = document.getElementById("ganjil genap").value;
+            var lima = document.getElementById("kuadrat").value;
+            var pilih = document.getElementById("pilih").value;
+
+            if (pilih == dua){
+                for (var i = 1; i <= jumlah; i++) {
+            if(i % 2 == 0)
+            document.write(i  + "<br>");
+        }
+            }
+
+            if (pilih == tiga){
+                for (var i = jumlah; i >= 5; i--) {
+            if(i % 5 == 0)
+            document.write(i  + "<br>");
+        }
+            }
+
+            if(pilih == empat){
+                for(var i =1; i <=20 ; i++){
+            if (i % 2 == 0)
+                document.write(i +  " ====> ini adalah genap" +  "<br>")
+                if (i % 2 == 1)
+        document.write(i +  "  ====> ini adalah ganjil" + "<br>")
+        }
+            }
+
+            if(pilih == lima){
+                for(var i = 1; i <= 10; i++){
+                document.write(i + "  Angka Berkuadrat =======>  " + i*i + "<br>")
+            }
+            }
+
+            if(pilih == satu){
+                switch(jumlah){
+            case "hitam" :
+                document.write("Warna Hitam Tidak Selau Kotor Brodi")
+                break;
+                case "putih" :
+                    document.write("Warna Putih Tidak Selalu Suci Bro")
+                    break;
+                    case "merah" :
+                        document.write("Hati Hati Warna Merah Di Tabrak Banteng")
+                        default :
+        }
+            }
+        }
+    </script>
+</body>
+</html>
